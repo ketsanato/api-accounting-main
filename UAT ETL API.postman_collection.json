@@ -1,0 +1,556 @@
+{
+  "info": {
+    "_postman_id": "8aa2c042-95d6-4093-a2c7-a288b8f6cbcb",
+    "name": "UAT ETL API",
+    "description": "charset=utf-8&userID=20250421091&transactionID=20250421145200&msisdn=2026826806&dat  \neTimeProcess=2025-04-21  \n15:12:43&amount=0&sign_type=SHA512&signkey= f899ce991f24f6baf144b5062cc0082f68ebe7c33d7bc1aaf56f83c7fcf69baf414608b5e62b3e3b74edaa81d874c664ebaab8c5d7cfef5c18b0018d45f3c53e&url=[https://manage.etllao.com:8889/](https://manage.etllao.com:8889/)\n\n---\n\n---\n\nCC238837090B61A626D220A86AAF16C734BFAC4468EDA2D58C1369DC9E67CE2C28A140FFE972E039DBF8825B505908FF28309CEC5CCD1020D0B8EF1F72B4C2E5",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "40376918"
+  },
+  "item": [
+    {
+      "name": "1.1. Query prepaid balance",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"\nxmlns:web=\"http://webservice.etlpayemtandtopup.com\">\n    <soap:Header/>\n    <soap:Body>\n        <web:queryPreapidBalance>\n            <web:userID>20250421091</web:userID>\n            <web:msisdn>2026826806</web:msisdn>\n            <web:transactionID>20250421145201</web:transactionID>\n            <web:dateTimeProcess>2025-04-21 15:12:43</web:dateTimeProcess>\n            <web:keyCode>\nE98D7706FFA7BBA022AE3F6E4DF6637214614770E4EAAFAB2BF6FD74D66290D0EBD2E3A6B1C924A2BBA860DBE271E1F2BE7FC8D1D1438BF485CDC815549BDD66</web:keyCode>\n            <web:amount>0</web:amount>\n        </web:queryPreapidBalance>\n    </soap:Body>\n</soap:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URL:ETL}}/ETLPaymentTopup/services/ETLPaymentTopupWS?wsdl=E98D7706FFA7BBA022AE3F6E4DF6637214614770E4EAAFAB2BF6FD74D66290D0EBD2E3A6B1C924A2BBA860DBE271E1F2BE7FC8D1D1438BF485CDC815549BDD66",
+          "host": ["{{URL:ETL}}"],
+          "path": ["ETLPaymentTopup", "services", "ETLPaymentTopupWS"],
+          "query": [
+            {
+              "key": "wsdl",
+              "value": "E98D7706FFA7BBA022AE3F6E4DF6637214614770E4EAAFAB2BF6FD74D66290D0EBD2E3A6B1C924A2BBA860DBE271E1F2BE7FC8D1D1438BF485CDC815549BDD66"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "1.2. Query subscriber type",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [""],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"\n    xmlns:web=\"http://webservice.etlpayemtandtopup.com\">\n      <soap:Header/>\n      <soap:Body>\n        <web:querySubscriberType>\n      <web:userID>20250421091</web:userID>\n          <web:msisdn>2026826806</web:msisdn>\n          <web:transactionID>02</web:transactionID>\n          <web:dateTimeProcess>2025-04-23 08:04:45</web:dateTimeProcess>\n          <web:keyCode>656BEBE632044B7D5970FC2FE7F98724F83CD8A326D0C6A78B2CBEDC5D700AADF30F4B8DB1A454DDEBDC2E8519E855B4CEE19FE6B673A8726F559CC6CC29E12A</web:keyCode>\n          <web:amount>0</web:amount>\n          </web:querySubscriberType>\n      </soap:Body>\n    </soap:Envelope>",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URL-ETL2}}/ETLPaymentTopup/services/ETLPaymentTopupWS?wsdl",
+          "host": ["{{URL-ETL2}}"],
+          "path": ["ETLPaymentTopup", "services", "ETLPaymentTopupWS"],
+          "query": [
+            {
+              "key": "wsdl",
+              "value": null
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "1.2. . Query subscriber type",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "<?xml version=\"1.0\"?>\n<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"\nxmlns:web=\"http://webservice.etlpayemtandtopup.com\">\n <soap:Header/>\n <soap:Body>\n <web:queryPreapidBalance>\n            <web:userID>20250421091</web:userID>\n            <web:msisdn>2026826806</web:msisdn>\n            <web:transactionID>11</web:transactionID>\n            <web:dateTimeProcess>2023-01-09 10:00:00</web:dateTimeProcess>\n<web:keyCode>E98D7706FFA7BBA022AE3F6E4DF6637214614770E4EAAFAB2BF6FD74D66290D0EBD2E3A6B1C924A2BBA860DBE271E1F2BE7FC8D1D1438BF485CDC815549BDD66</web:keyCode>\n <web:amount>0</web:amount>\n </web:queryPreapidBalance>\n </soap:Body>\n</soap:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://manage.etllao.com:8889/ETLPaymentTopup/services/ETLPaymentTopupWS?wsdl",
+          "protocol": "https",
+          "host": ["manage", "etllao", "com"],
+          "port": "8889",
+          "path": ["ETLPaymentTopup", "services", "ETLPaymentTopupWS"],
+          "query": [
+            {
+              "key": "wsdl",
+              "value": null
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "1.3. Query subscriber type",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [""],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"\n    xmlns:web=\"http://webservice.etlpayemtandtopup.com\">\n      <soap:Header/>\n      <soap:Body>\n        <web:querySubscriberType>\n      <web:userID>20250421091</web:userID>\n          <web:msisdn>2026826806</web:msisdn>\n          <web:transactionID>02</web:transactionID>\n          <web:dateTimeProcess>2025-04-23 08:04:45</web:dateTimeProcess>\n          <web:keyCode>656BEBE632044B7D5970FC2FE7F98724F83CD8A326D0C6A78B2CBEDC5D700AADF30F4B8DB1A454DDEBDC2E8519E855B4CEE19FE6B673A8726F559CC6CC29E12A</web:keyCode>\n          <web:amount>0</web:amount>\n          </web:querySubscriberType>\n      </soap:Body>\n    </soap:Envelope>",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URL-ETL2}}/ETLPaymentTopup/services/ETLPaymentTopupWS?wsdl",
+          "host": ["{{URL-ETL2}}"],
+          "path": ["ETLPaymentTopup", "services", "ETLPaymentTopupWS"],
+          "query": [
+            {
+              "key": "wsdl",
+              "value": null
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "1.4. Query postpaid debit",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"\n    xmlns:web=\"http://webservice.etlpayemtandtopup.com\">\n      <soap:Header/>\n      <soap:Body>\n        <web:queryPostPaidDebts>\n          <web:userID>20250421091</web:userID>\n          <web:msisdn>2026826806</web:msisdn>\n          <web:transactionID>009</web:transactionID>\n          <web:dateTimeProcess>2025-04-23 08:04:45</web:dateTimeProcess>\n          <web:keyCode>838D68132E4130C29C0881B279C19D4201CE953E86DDFE1D164BCE2B45629F62F1BCDC274659A19F31A885654C82F81CA9B61C86F71CEA29EEC322BFFC1AC42C</web:keyCode>\n          <web:amount>0</web:amount>      \n              </web:queryPostPaidDebt>\n      </soap:Body>\n    </soap:Envelope>",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URL-ETL2}}/ETLPaymentTopup/services/ETLPaymentTopupWS?wsdl",
+          "host": ["{{URL-ETL2}}"],
+          "path": ["ETLPaymentTopup", "services", "ETLPaymentTopupWS"],
+          "query": [
+            {
+              "key": "wsdl",
+              "value": null
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "1.5. Query PSTN number debit",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"\nxmlns:web=\"http://webservice.etlpayemtandtopup.com\">\n <soap:Header/>\n <soap:Body>\n <web:queryPSTNDebt>\n       <web:userID>20250421091</web:userID>\n          <web:msisdn>2026826806</web:msisdn>\n          <web:transactionID>00001</web:transactionID>\n          <web:dateTimeProcess>2025-04-23 08:04:45</web:dateTimeProcess>\n          <web:keyCode>AB1710889B2003656410164E5E4A9178CB615A0230CD15047D6DE38F0D7B433DB8DECE8BEF6D8EF1DC891992971ED9326ACCF25DF887CD684EB672887055146D</web:keyCode>\n          <web:amount>0</web:amount>\n </web:queryPSTNDebt>\n </soap:Body>\n</soap:Envelope>",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URL-ETL2}}/ETLPaymentTopup/services/ETLPaymentTopupWS?wsdl",
+          "host": ["{{URL-ETL2}}"],
+          "path": ["ETLPaymentTopup", "services", "ETLPaymentTopupWS"],
+          "query": [
+            {
+              "key": "wsdl",
+              "value": null
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "1.6. Query master SIM balance",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "\n<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"\nxmlns:web=\"http://webservice.etlpayemtandtopup.com\">\n <soap:Header/>\n <soap:Body>\n  <web:queryMasterSimBalance>\n       <web:userID>20250421091</web:userID>\n <web:amount>0</web:amount>\n          <web:msisdn>2026826806</web:msisdn>\n <web:transactionID>1111111</web:transactionID>\n <web:dateTimeProcess>2025-04-23 08:04:45</web:dateTimeProcess>\n <web:queryType>1</web:queryType>\n<web:keyCode>FC5CD96283C79DB0CBA86AEE731386C59042A221B22D8C30BC7561676587E1F0824982C6820D9E2B0EB08A2DF3A9A4CE8646B840E2031CC34A85FC160CCDD5AD</web:keyCode>\n </web:queryMasterSimBalance>\n </soap:Body>\n</soap:Envelope>",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URL-ETL2}}/ETLPaymentTopup/services/ETLPaymentTopupWS?wsdl",
+          "host": ["{{URL-ETL2}}"],
+          "path": ["ETLPaymentTopup", "services", "ETLPaymentTopupWS"],
+          "query": [
+            {
+              "key": "wsdl",
+              "value": null
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "1.7. Query Internet debit",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"\nxmlns:web=\"http://webservice.etlpayemtandtopup.com\">\n <soap:Header/>\n <soap:Body>\n <web:queryInternetDebt>\n          <web:userID>20250421091</web:userID>\n <web:internetID>ADSL21100013</web:internetID>\n <web:transactionID>12345</web:transactionID>\n <web:dateTimeProcess>2025-04-23 08:04:45</web:dateTimeProcess>\n<web:keyCode>B7E53D3B0808826093923AFF47281FEA255CA54BE437E833A51F756E6B117B8A6CB014\nA0DA8C0A86C51367BA836950D1AC4B4D0AF4D89C36C9A9401970E9B240</web:keyCode>\n <web:amount>0</web:amount>\n </web:queryInternetDebt>\n </soap:Body>\n</soap:Envelope>",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URL-ETL2}}/ETLPaymentTopup/services/ETLPaymentTopupWS?wsdl",
+          "host": ["{{URL-ETL2}}"],
+          "path": ["ETLPaymentTopup", "services", "ETLPaymentTopupWS"],
+          "query": [
+            {
+              "key": "wsdl",
+              "value": null
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "1.8. Query package data available belong to mobile number",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"\nxmlns:web=\"http://webservice.etlpayemtandtopup.com\">\n <soap:Header/>\n <soap:Body>\n <web:queryPackagDataAvailable>\n     <web:userID>20250421091</web:userID>\n          <web:msisdn>2026826806</web:msisdn>\n          <web:transactionID>1112222222</web:transactionID>\n          <web:dateTimeProcess>2025-04-23 08:04:45</web:dateTimeProcess>\n          <web:keyCode>D46FD2D2AB2D4A4BC84B9912F6ECF130A5FC1380A9CA8E415755F899035A1A72BB9CC6711A61D7292C7E2D03D821DC978733CB2958FD2F5B9762835D4E35DDC6\n</web:keyCode>\n <web:amount>0</web:amount>\n </web:queryPackagDataAvailable>\n </soap:Body>\n</soap:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URL-ETL2}}/ETLPaymentTopup/services/ETLPaymentTopupWS?wsdl",
+          "host": ["{{URL-ETL2}}"],
+          "path": ["ETLPaymentTopup", "services", "ETLPaymentTopupWS"],
+          "query": [
+            {
+              "key": "wsdl",
+              "value": null
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "1.9. Topup/Recharge prepaid mobile (Not use master SIM)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"\nxmlns:web=\"http://webservice.etlpayemtandtopup.com\">\n <soap:Header/>\n <soap:Body>\n <web:topupPrepaid>\n     <web:userID>20250421091</web:userID>\n          <web:msisdn>2026826806</web:msisdn>\n          <web:transactionID>1112222221222</web:transactionID>\n          <web:dateTimeProcess>2025-04-23 08:04:45</web:dateTimeProcess>\n <web:topupAmt>10</web:topupAmt>\n <web:billdate>20230113</web:billdate>\n <web:keyCode>C1CFBCFAD5D3438727A63761932F11B9C12D01D10CCC1A88172CAD00C15EE29A982F1A3C04ACE012BA5B4F45E9011B8C6B1A5C1E9F99DABCBB673B4A7C96D052</web:keyCode>\n </web:topupPrepaid>\n </soap:Body>\n</soap:Envelope>",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URL-ETL2}}/ETLPaymentTopup/services/ETLPaymentTopupWS?wsdl",
+          "host": ["{{URL-ETL2}}"],
+          "path": ["ETLPaymentTopup", "services", "ETLPaymentTopupWS"],
+          "query": [
+            {
+              "key": "wsdl",
+              "value": null
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "1.10. Topup/Recharge prepaid mobile (with master SIM)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"\nxmlns:web=\"http://webservice.etlpayemtandtopup.com\">\n <soap:Header/>\n <soap:Body>\n <web:topupPrepaidMasterSim>\n     <web:userID>20250421091</web:userID>\n          <web:msisdn>2026826806</web:msisdn>\n <web:topupAmt>10</web:topupAmt>\n <web:transactionID>22222222</web:transactionID>\n <web:billdate>20230113</web:billdate>\n          <web:dateTimeProcess>2025-04-23 08:04:45</web:dateTimeProcess>\n\n<web:keyCode>3820644F11FC56115714CE7B2A00E53B867355CC0D985571B737B91BDA8C5901FF037BB3FD4EA722EDE08340FEA5AADA02C8CA3F2A779592EB530BF7BE9288B5</web:keyCode>\n </web:topupPrepaidMasterSim>\n </soap:Body>\n</soap:Envelope>",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URL-ETL2}}/ETLPaymentTopup/services/ETLPaymentTopupWS?wsdl",
+          "host": ["{{URL-ETL2}}"],
+          "path": ["ETLPaymentTopup", "services", "ETLPaymentTopupWS"],
+          "query": [
+            {
+              "key": "wsdl",
+              "value": null
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "1.11. Topup/Recharge Internet prepaid",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"\nxmlns:web=\"http://webservice.etlpayemtandtopup.com\">\n <soap:Header/>\n <soap:Body>\n <web:topupInternetPrepaid>\n <web:userID>1234567890</web:userID>\n <web:internetID>ADSL21082012</web:internetID>\n <web:topupAmt>10</web:topupAmt>\n <web:transactionID>1122</web:transactionID>\n <web:billdate>202301</web:billdate>\n <web:dateTimeProcess>2023-01-14 10:00:00</web:dateTimeProcess>\n\n<web:keyCode>A901A1493B9EBFA6B717481E2029FEB48A0132441E15141E1A860E3F7C2EF63998DB7A\nDE08F3DB5EDAE3CDC54092C9B5F92CFCAC52DFFFBD298136AC27B91190</web:keyCode>\n </web:topupInternetPrepaid>\n </soap:Body>\n </soap:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URL:ETL}}/ETLPaymentTopup/services/ETLPaymentTopupWS?wsdl",
+          "host": ["{{URL:ETL}}"],
+          "path": ["ETLPaymentTopup", "services", "ETLPaymentTopupWS"],
+          "query": [
+            {
+              "key": "wsdl",
+              "value": null
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "1.12. PSTN (Home phome) payment",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"\nxmlns:web=\"http://webservice.etlpayemtandtopup.com\">\n <soap:Header/>\n <soap:Body>\n <web:paymentPSTN>\n <web:userID>1234567890</web:userID>\n <web:pstnNumber>021260209</web:pstnNumber>\n <web:paymentAmt>10</web:paymentAmt>\n <web:transactionID>12345</web:transactionID>\n <web:billdate>202301</web:billdate>\n <web:dateTimeProcess>2023-01-14 10:00:00</web:dateTimeProcess>\n\n<web:keyCode>694E755D6A926490641A735285F2DB83CBA202F63E6FFB9F0A10313214FB38AA2FFF84\n5C9FBB33DAC7C20C900BC181F89FB382923D3133A04E6D3FB73DB2A9A1</web:keyCode>\n </web:paymentPSTN>\n </soap:Body>\n</soap:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URL:ETL}}/ETLPaymentTopup/services/ETLPaymentTopupWS?wsdl",
+          "host": ["{{URL:ETL}}"],
+          "path": ["ETLPaymentTopup", "services", "ETLPaymentTopupWS"],
+          "query": [
+            {
+              "key": "wsdl",
+              "value": null
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "1.13. Postpaid payment",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"\nxmlns:web=\"http://webservice.etlpayemtandtopup.com\">\n <soap:Header/>\n <soap:Body>\n <web:paymentPostpaid>\n <web:msisdn>2028044486</web:msisdn>\n <web:paymentAmt>10</web:paymentAmt>\n <web:transactionID>1234567</web:transactionID>\n <web:billdate>202301</web:billdate>\n <web:dateTimeProcess>2023-01-14 10:00:00</web:dateTimeProcess>\n\n<web:keyCode>CB20479A4DAD90E0F9AEBBA259265D8C6AB079191A2BCCAE02100F5182C3FA8C128CC\n0DE59E0DEA928E48349A971AD1B5C522F6650F136382D908117048A4E63</web:keyCode>\n </web:paymentPostpaid>\n </soap:Body>\n</soap:Envelope>",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URL:ETL}}/ETLPaymentTopup/services/ETLPaymentTopupWS?wsdl",
+          "host": ["{{URL:ETL}}"],
+          "path": ["ETLPaymentTopup", "services", "ETLPaymentTopupWS"],
+          "query": [
+            {
+              "key": "wsdl",
+              "value": null
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "1.14. Payment Internet ID",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"\nxmlns:web=\"http://webservice.etlpayemtandtopup.com\">\n <soap:Header/>\n <soap:Body>\n <web:paymentInternet>\n <web:userID>{{userID1}}</web:userID>\n <web:internetID>ADSL21100013</web:internetID>\n <web:paymentAmt>10</web:paymentAmt>\n <web:transactionID>12345679</web:transactionID>\n <web:billdate>202301</web:billdate>\n  <web:dateTimeProcess>{{dateTimeProcess}}/web:dateTimeProcess>\n\n<web:keyCode>405B997A586DADDFD8EC11503F8413A699F81C914BAA859346F7DFCA2895293BDDC3F\n76000F70394C51498C73F4EA7B88F5108FB521F5578CCB44468E50A8B1E</web:keyCode>\n </web:paymentInternet>\n </soap:Body>\n</soap:Envelope>",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URL:ETL}}/ETLPaymentTopup/services/ETLPaymentTopupWS?wsdl",
+          "host": ["{{URL:ETL}}"],
+          "path": ["ETLPaymentTopup", "services", "ETLPaymentTopupWS"],
+          "query": [
+            {
+              "key": "wsdl",
+              "value": null
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "1.15. Payment Internet ID",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"\nxmlns:web=\"http://webservice.etlpayemtandtopup.com\">\n <soap:Header/>\n <soap:Body>\n <web:buyPackagDataWithMasterSIM>\n <web:userID>{{userID1}}</web:userID>\n <web:amount>0</web:amount>\n          <web:msisdn>{{misidn}}</web:msisdn>\n <web:billdate>202301</web:billdate>\n <web:transactionID>666666666</web:transactionID>\n  <web:dateTimeProcess>{{dateTimeProcess}}/web:dateTimeProcess>\n\n<web:keyCode>446D33B0FA205312267435EF9ABB6B7F049B69B79CCDAC2F24850F85A1735439DD198677E88C2C927FC7CFAAA1839FA5F1EF670519EBF013A42DC816CCFBD345\n</web:keyCode>\n <web:packageName>ET7</web:packageName>\n </web:buyPackagDataWithMasterSIM>\n </soap:Body>\n</soap:Envelope>",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URL:ETL}}/ETLPaymentTopup/services/ETLPaymentTopupWS?wsdl",
+          "host": ["{{URL:ETL}}"],
+          "path": ["ETLPaymentTopup", "services", "ETLPaymentTopupWS"],
+          "query": [
+            {
+              "key": "wsdl",
+              "value": null
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "1.16. Transaction query",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"\nxmlns:web=\"http://webservice.etlpayemtandtopup.com\">\n <soap:Header/>\n <soap:Body>\n <web:queryTransaction>\n <web:userID>?</web:userID>\n <web:amount>?</web:amount><web:msisdn>?</web:msisdn>\n <web:serialNumber>?</web:serialNumber>\n <web:transactionID>?</web:transactionID>\n <web:billdate>?</web:billdate>\n <web:dateTimeProcess>?</web:dateTimeProcess>\n <web:keyCode>?</web:keyCode>\n </web:queryTransaction>\n </soap:Body>\n</soap:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URL:ETL}}/ETLPaymentTopup/services/ETLPaymentTopupWS?wsdl",
+          "host": ["{{URL:ETL}}"],
+          "path": ["ETLPaymentTopup", "services", "ETLPaymentTopupWS"],
+          "query": [
+            {
+              "key": "wsdl",
+              "value": null
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "URL:ETL",
+      "value": "https://manage.etllao.com:8889",
+      "type": "default"
+    },
+    {
+      "key": "ີ້URL-ETL",
+      "value": "https://manage.etllao.com:8889/ETLPaymentTopup/services/ETLPaymentTopupWS?wsdl",
+      "type": "default"
+    },
+    {
+      "key": "URL",
+      "value": "https://manage.etllao.com:8889/ETLPaymentTopup/services/ETLPaymentTopupWS?wsdl",
+      "type": "default"
+    },
+    {
+      "key": "URL-ETL2",
+      "value": "https://manage.etllao.com:8889",
+      "type": "default"
+    },
+    {
+      "key": "1234567890",
+      "value": "userID",
+      "type": "default"
+    },
+    {
+      "key": "userID",
+      "value": "userID",
+      "type": "default"
+    },
+    {
+      "key": "userID1",
+      "value": "20250421091",
+      "type": "default"
+    },
+    {
+      "key": "dateTimeProcess",
+      "value": "2025-04-23 08:04:45",
+      "type": "default"
+    },
+    {
+      "key": "misidn",
+      "value": "2026826806",
+      "type": "default"
+    }
+  ]
+}

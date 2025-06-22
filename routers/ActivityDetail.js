@@ -1,0 +1,10 @@
+const AccountingType = require('../controllers/ActivityDetail');
+const router = require('express').Router();
+const url = "/ActivityDetail";
+router.get(url + '/get', AccountingType.get);
+router.post(url + '/getbyid', AccountingType.getbyid);
+router.post(url + '/getbyone', AccountingType.getByOne);
+router.post(url + '/create', AccountingType.create);
+router.put(url + '/update', AccountingType.update);
+router.delete(url + '/delete', AccountingType.delete);
+module.exports = router;

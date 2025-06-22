@@ -1,0 +1,10 @@
+const Contorller = require('../controllers/AccountingActivity');
+const router = require('express').Router();
+const url = "/AccountingActivity";
+router.get(url + '/get', Contorller.get);
+router.post(url + '/getbyid', Contorller.getbyid);
+router.post(url + '/getbyone', Contorller.getByOne);
+router.post(url + '/create', Contorller.create);
+router.put(url + '/update', Contorller.update);
+router.delete(url + '/delete', Contorller.delete);
+module.exports = router;

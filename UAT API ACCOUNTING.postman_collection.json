@@ -1,0 +1,914 @@
+{
+	"info": {
+		"_postman_id": "a56db6f1-6cbd-4038-81d0-4a1591fb6ff3",
+		"name": "UAT API ACCOUNTING",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40376918"
+	},
+	"item": [
+		{
+			"name": "AccountingType",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/AccountingType/get",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"AccountingType",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"AccountingTypeID\": \"4dd59d1c-a0fb-4787-b7e7-6cef583e702c\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/AccountingType/getbyid",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"AccountingType",
+								"getbyid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by one",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"AccountTypeName\": \"ັຫກຫັ\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/AccountingType/getbyone",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"AccountingType",
+								"getbyone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"AccountingType\":\"asdsad\", \n       \"AccountingTypeName\":\"asdsad\",\n\n        \"AccountingTypeCode\":\"213213\",\n\"Status\":\"Status\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/AccountingType/create",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"AccountingType",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update :id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{\n     \"AccountingTypeID\": \"c40d10c9-1f80-41f2-8ad6-d479d0000674\",\n    \"AccountTypeName\":\"TTTTTT\",\n        \"AccountTypeCode\":\"TTTTTT\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/AccountingType/update",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"AccountingType",
+								"update"
+							],
+							"query": [
+								{
+									"key": "AccountingTypeID",
+									"value": "7703a9d9-b03e-4645-9f99-3ba6040e731c",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete :id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n     \"AccountingTypeID\": \"c40d10c9-1f80-41f2-8ad6-d479d0000674\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/AccountingType/delete",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"AccountingType",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AccountingGroup",
+			"item": [
+				{
+					"name": "get",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/{{AccountingGroup}}/get",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"{{AccountingGroup}}",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"AccountingGroupID\": \"dee52cd0-060e-47ed-90e0-632c68171bb6\"\n            }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/{{AccountingGroup}}/getbyid",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"{{AccountingGroup}}",
+								"getbyid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by Name",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n            \"AccountingGroupName\": \"asasass\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/{{AccountingGroup}}/getbyone",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"{{AccountingGroup}}",
+								"getbyone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"AccountingGroupName\": \"asasass\",\n    \"AccountingGroupCode\": \"asasas\",\n    \"Status\":\"status\",\n        \"AccountingTypeID\": \"850eabbd-9b87-43c7-b5a7-b9cfc73a3ccd\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/{{AccountingGroup}}/create",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"{{AccountingGroup}}",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update :id Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"AccountingGroupID\": \"b84d4d92-ec76-40ed-b02c-ad6abf67b177\",\n     \"AccountingGroupName\": \"c40d10c9-1f80-41f2-8ad6-d479d0000674\",\n    \"AccountingGroupCode\": \"TTTTTT\",\n    \"AccountingTypeID\": \"91f4d046-0f3f-4308-a679-9b5d81a407c5\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/{{AccountingGroup}}/update",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"{{AccountingGroup}}",
+								"update"
+							],
+							"query": [
+								{
+									"key": "AccountingTypeID",
+									"value": "7703a9d9-b03e-4645-9f99-3ba6040e731c",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete :id Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n     \"AccountingTypeID\": \"c40d10c9-1f80-41f2-8ad6-d479d0000674\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/{{AccountingGroup}}/delete",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"{{AccountingGroup}}",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AccountingGroupDetail",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/{{AccountingGroupDetail}}/get",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"{{AccountingGroupDetail}}",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get :id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"AccountingGroupDetailID\": \"c40d10c9-1f80-41f2-8ad6-d479d0000674\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/{{AccountingGroupDetail}}/getbyid",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"{{AccountingGroupDetail}}",
+								"getbyid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get :Name",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"AccountingGroupDetailName\": \"\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/{{AccountingGroupDetail}}/getbyone",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"{{AccountingGroupDetail}}",
+								"getbyone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update :id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"AccountingGroupDetailID\": \"b84d4d92-ec76-40ed-b02c-ad6abf67b177\"\n     \"AccountingGroupDetailName\": \"c40d10c9-1f80-41f2-8ad6-d479d0000674\",\n    \"Status\": \"TTTTTT\",\n    \"AccountingTypeID\": \"07ef726b-a05a-4f6b-8f6f-33e9405b0d3a\"\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/{{AccountingGroupDetail}}/update",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"{{AccountingGroupDetail}}",
+								"update"
+							],
+							"query": [
+								{
+									"key": "AccountingTypeID",
+									"value": "7703a9d9-b03e-4645-9f99-3ba6040e731c",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete :id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n     \"AccountingTypeID\": \"c40d10c9-1f80-41f2-8ad6-d479d0000674\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/{{Table}}/delete",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"{{Table}}",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"AccountingGroupDetailName\": \"asasass\",\n    \"AccountingGroupDetailCode\": \"asasas\",\n    \"Status\":\"status\",\n        \"AccountingGroupID\": \"61fdd43c-7e86-4564-ae7c-edbcef3cb634\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/{{AccountingGroupDetail}}/create",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"{{AccountingGroupDetail}}",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Accounting",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/{{Accounting}}/get",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"{{Accounting}}",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get :id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"AccountingID\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/{{Accounting}}/getbyid",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"{{Accounting}}",
+								"getbyid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get :Name",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"AccountingName\": \"\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/{{AccountGroupDetail}}/getbyone",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"{{AccountGroupDetail}}",
+								"getbyone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"AccountingName\": \"\",\n    \"AccountingCode\": \"\",\n    \"Status\": \"91f4d046-0f3f-4308-a679-9b5d81a407c5\",\n        \"AccountingGroupDetailID\": \"fc4c8829-3242-4059-b4b0-1063d2703364\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/{{Accounting}}/create",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"{{Accounting}}",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update :id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Accounting\": \"b84d4d92-ec76-40ed-b02c-ad6abf67b177\"\n     \"AccountingGroupDetailName\": \"c40d10c9-1f80-41f2-8ad6-d479d0000674\",\n    \"Status\": \"TTTTTT\",\n    \"AccountingTypeID\": \"07ef726b-a05a-4f6b-8f6f-33e9405b0d3a\"\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/{{AccountGroupDetail}}/update",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"{{AccountGroupDetail}}",
+								"update"
+							],
+							"query": [
+								{
+									"key": "AccountingTypeID",
+									"value": "7703a9d9-b03e-4645-9f99-3ba6040e731c",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete :id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n     \"AccountingTypeID\": \"c40d10c9-1f80-41f2-8ad6-d479d0000674\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/{{Table}}/delete",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"{{Table}}",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User1",
+			"item": [
+				{
+					"name": "get Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/{{User1}}/get",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"{{User1}}",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get :id Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"AccountingID\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/{{Accounting}}/getbyid",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"{{Accounting}}",
+								"getbyid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get :Name Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"AccountingName\": \"\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/{{AccountGroupDetail}}/getbyone",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"{{AccountGroupDetail}}",
+								"getbyone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"AccountingName\": \"\",\n    \"AccountingCode\": \"\",\n    \"Status\": \"91f4d046-0f3f-4308-a679-9b5d81a407c5\",\n        \"AccountingGroupDetailID\": \"fc4c8829-3242-4059-b4b0-1063d2703364\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/{{Accounting}}/create",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"{{Accounting}}",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update :id Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Accounting\": \"b84d4d92-ec76-40ed-b02c-ad6abf67b177\"\n     \"AccountingGroupDetailName\": \"c40d10c9-1f80-41f2-8ad6-d479d0000674\",\n    \"Status\": \"TTTTTT\",\n    \"AccountingTypeID\": \"07ef726b-a05a-4f6b-8f6f-33e9405b0d3a\"\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/{{AccountGroupDetail}}/update",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"{{AccountGroupDetail}}",
+								"update"
+							],
+							"query": [
+								{
+									"key": "AccountingTypeID",
+									"value": "7703a9d9-b03e-4645-9f99-3ba6040e731c",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete :id Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n     \"AccountingTypeID\": \"c40d10c9-1f80-41f2-8ad6-d479d0000674\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/{{Table}}/delete",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"{{Table}}",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:9000/api",
+			"type": "default"
+		},
+		{
+			"key": "AccountGroup",
+			"value": "AccountGroup",
+			"type": "default"
+		},
+		{
+			"key": "Accounting",
+			"value": "Accounting",
+			"type": "string"
+		},
+		{
+			"key": "Table",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "AccountingGroup",
+			"value": "AccountingGroup",
+			"type": "default"
+		},
+		{
+			"key": "AccountingGroupDetail",
+			"value": "AccountingGroupDetail",
+			"type": "default"
+		},
+		{
+			"key": "User1",
+			"value": "User1",
+			"type": "default"
+		}
+	]
+}

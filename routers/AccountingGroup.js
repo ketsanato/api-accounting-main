@@ -1,0 +1,10 @@
+const AccountGroup = require('../controllers/AccountingGroup');
+const router = require('express').Router();
+const url = "/AccountingGroup";
+router.get(url + '/get', AccountGroup.get);
+router.post(url + '/getbyid', AccountGroup.getbyid);
+router.post(url + '/getbyone', AccountGroup.getByOne);
+router.post(url + '/create', AccountGroup.create);
+router.put(url + '/update', AccountGroup.update);
+router.delete(url + '/delete', AccountGroup.delete);
+module.exports = router;

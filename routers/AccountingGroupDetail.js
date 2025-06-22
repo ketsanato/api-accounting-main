@@ -1,0 +1,10 @@
+const AccountingGroupDetail = require('../controllers/AccountingGroupDetail');
+const router = require('express').Router();
+const url = "/AccountingGroupDetail";
+router.get(url + '/get', AccountingGroupDetail.get);
+router.post(url + '/getbyid', AccountingGroupDetail.getbyid);
+router.post(url + '/getbyone', AccountingGroupDetail.getByOne);
+router.post(url + '/create', AccountingGroupDetail.create);
+router.put(url + '/update', AccountingGroupDetail.update);
+router.delete(url + '/delete', AccountingGroupDetail.delete);
+module.exports = router;
